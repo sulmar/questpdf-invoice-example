@@ -53,7 +53,16 @@ var invoice = invoiceRepository.Create();
 
 document = new InvoiceDocument(invoice);
 
+// document.ShowInPreviewer();
 
-document.ShowInPreviewer();
+// document.GeneratePdf("invoice.pdf");
 
-document.GeneratePdf("invoice.pdf");
+EventFaker eventFaker = new EventFaker(new PersonFaker());
+
+var @event = eventFaker.Generate();
+Console.WriteLine(@event);
+
+EventDocument eventDocument = new EventDocument(@event);
+
+eventDocument.ShowInPreviewer();
+

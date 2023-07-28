@@ -1,13 +1,10 @@
 ﻿using QuestPDF.Drawing;
 using QuestPDFDemo.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuestPDFDemo.Documents
 {
+
+
     public class InvoiceDocument : IDocument
     {
         public Invoice Model { get; }
@@ -157,7 +154,7 @@ namespace QuestPDFDemo.Documents
                 column.Item().Text(Title).SemiBold();
                 column.Item().PaddingBottom(5).LineHorizontal(1);
 
-                column.Item().Text(Address.CompanyName);
+                column.Item().Text(Address.CompanyName).Bold();
                 column.Item().Text(Address.Street);
                 column.Item().Text($"{Address.City}, {Address.State}");
                 column.Item().Text(Address.Email);

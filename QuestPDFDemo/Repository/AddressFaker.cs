@@ -3,6 +3,7 @@ using QuestPDFDemo.Domain;
 
 namespace QuestPDFDemo.Repository
 {
+
     public class AddressFaker : Faker<Address>
     {
         public AddressFaker()
